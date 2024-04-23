@@ -60,7 +60,6 @@ function App() {
     <>
       <div className="h-screen	w-screen flex flex-col mt-5 items-center ">
         <h1 className="text-3xl text-center mt-3">Contact github groupe Maroc et autres</h1>
-        <button className="border ronded  text-white px-4 bg-green-700 hover:bg-green-900">Form</button>
         <section className="flex flex-col">
          <form  onSubmit={(e) => handleSubmit(e)} className="mt-5">
             <div className="flex flex-col">
