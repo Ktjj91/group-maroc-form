@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import bgImage from "./assets/bg-image.jpg";
 import logo from "./assets/logo.png";
 import maroc from "./assets/maroc.png";
 
@@ -73,7 +74,7 @@ function App() {
       <div
         className="flex flex-col justify-between align-center items-center"
         style={{
-          backgroundImage: "url(/src/assets/bg-image.jpg)",
+          backgroundImage: `url(${bgImage})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
