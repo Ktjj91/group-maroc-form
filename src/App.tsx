@@ -4,9 +4,16 @@ import bgImage from "./assets/bg-image.jpg";
 import logo from "./assets/logo.png";
 import maroc from "./assets/maroc.png";
 
+interface User {
+  name:string,
+  discord:string,
+  linkedin:string,
+  github:string
+}
+
 function App() {
-  const [users, setUsers] = useState([]);
-  const arrayData = [];
+  const [users, setUsers] = useState<User[]>([]);
+  const arrayData:User[] = [];
   const fetchData = async () => {
     try {
       const response = await fetch(
@@ -35,7 +42,7 @@ function App() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const data = new FormData(e.target);
-    const object = {};
+    const object:any = {};
     data.forEach(function (value, key) {
       object[key] = value;
     });
@@ -84,7 +91,7 @@ function App() {
         </h1>
 
         <div className="flex justify-center mx-auto w-[90%] flex-row flex-wrap">
-          {users.map((user) => (
+          {users.map((user:User) => (
             <article
               className="m-2  flex flex-col bg-white rounded-lg mt-5 border p-2"
               key={user.name + user + Math.random()}
