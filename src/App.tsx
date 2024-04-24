@@ -37,7 +37,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [users]);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
